@@ -21,5 +21,6 @@ export IMPORT_FILE=zookeeper_export.json
 ```bash
 export TARGET_ZK=localhost:3000
 export EXCEL_FILE=./zk.xlsx
+export EXCEL_FILE=./zk_temp_data.json
 ./zktool update
 ```
