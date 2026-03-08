@@ -19,9 +19,9 @@ var UpdateCmd = &cobra.Command{
 	Short: "Update Zookeeper nodes from Excel or JSON under /config/product",
 	Run: func(cmd *cobra.Command, args []string) {
 		targetZK := os.Getenv("TARGET_ZK")
-		filePath := os.Getenv("EXCEL_FILE")
+		filePath := os.Getenv("UPDATE_FILE")
 		if targetZK == "" || filePath == "" {
-			fmt.Println("TARGET_ZK and EXCEL_FILE env vars must be set")
+			fmt.Println("TARGET_ZK and UPDATE_FILE env vars must be set")
 			os.Exit(1)
 		}
 
