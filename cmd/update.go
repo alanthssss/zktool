@@ -114,7 +114,12 @@ func applyValue(conn *zk.Conn, zkPath, value string) {
 	}
 }
 
-func ensureParentExists(conn *zk.Conn, fullPath string) {
+type zkPathClient interface {
+	Exists(path string) (bool, *zk.Stat, error)
+	Create(path string, data []byte, flags int32, acl []zk.ACL) (string, error)
+}
+
+func ensureParentExists(conn zkPathClient, fullPath string) {
 	parent := path.Dir(fullPath)
 	parts := strings.Split(parent, "/")
 	cur := ""

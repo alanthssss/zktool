@@ -49,3 +49,11 @@ export TARGET_ZK=localhost:3000
 export UPDATE_FILE=./zk_temp_data.json
 ./zktool update
 ```
+
+## Testing
+
+Run the full test suite with:
+
+```bash
+go test ./...
+```
