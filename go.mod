@@ -1,4 +1,4 @@
-module zktool
+module seed
 
 go 1.20
 

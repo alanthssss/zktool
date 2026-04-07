@@ -1,4 +1,4 @@
-package cmd
+package zookeeper
 
 import (
 	"encoding/json"

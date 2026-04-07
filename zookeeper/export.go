@@ -1,4 +1,4 @@
-package cmd
+package zookeeper
 
 import (
 	"encoding/json"
@@ -55,8 +55,8 @@ func exportNode(p string, conn *zk.Conn, data map[string]map[string]interface{})
 			"data": string(val),
 			"stat": map[string]interface{}{
 				"version": stat.Version, "mtime": stat.Mtime,
-				"numChildren": stat.NumChildren,
-				"dataLength": stat.DataLength,
+				"numChildren":    stat.NumChildren,
+				"dataLength":     stat.DataLength,
 				"ephemeralOwner": stat.EphemeralOwner,
 			},
 		}
