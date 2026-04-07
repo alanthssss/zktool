@@ -2,7 +2,7 @@
 
 set -e
 
-APP_NAME="zktool"
+APP_NAME="seed"
 BUILD_DIR="build"
 PLATFORMS=(
   "linux/amd64"
